@@ -1,0 +1,109 @@
+JOINS:
+  SQL Joins allows as to access information from two or more tables at onces.
+
+
+SOME TYPES OF JOINS.
+1. inner join
+2. outer join
+3. cross join
+4. left join
+5. right join
+6. natural join
+7. self join
+8. multiple join
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INNER JOIN:
+    Inner joins returns the datasets that have matched values in both tables.
+    
+    SYNTAX:
+			SELECT column_names
+			FROM table1
+			INNER JOIN table2
+			ON table1.column_name = table2.column_name
+	
+	Example:
+			SELECT a.player_name, a.ipl_score, b.wc_score
+			FROM ipl a
+			INNER JOIN world_cup b
+			ON a.player_name = b.player_name;
+
+==========================================================================================================================================================================
+
+LEFT JOIN:
+	Left joins returns the all records from left table and matched records from right table.
+	
+	SYNTAX:
+			SELECT column_names
+			FROM table1
+			LEFT JOIN table2
+			ON table1.column_name = table2.column_name
+	
+	Example:
+			SELECT customers.customers_name, orders.customerID
+			FROM customers
+			LEFT JOIN orders
+			ON customers.customersID = orders.customerID
+			ORDER BY customers.customers_name
+
+=============================================================================================================================================================================
+
+RIGHT JOIN:
+		Right joins returns the all records from right table and matched records from left table.
+		
+		SYNTAX:
+				SELECT column_names
+				FROM table1
+				RIGHT JOIN table2
+				ON table1.column_name = table2.column_name
+			
+		Example:
+				SELECT orders.orderID, customers.firstName, customers.lastName
+				FROM orders
+				RIGHT JOIN customers
+				ON orders.customerID = customers.customerID
+
+===========================================================================================================================================================================
+
+FULL JOIN (or) FULL OUTER JOIN:
+		Full join returns all the records when there is a match in either the left table or right table.
+
+================================================================================================================================================================================
+
+SELF JOIN:
+		Self join is a regular join, but the table is joined with it-self.
+		
+		SYNTAX:
+				SELECT column_names
+				FROM table t1, table t2    // both tables are same but different reference (t1, t2)
+				WHERE condition
+				ORDER BY column_name
+		
+		Example:
+				SELECT t1.citizen_name AS citizen_name1, t2.citizen_name AS citizen_name2, t1.city
+				FROM citizens t1, citizens t2
+				WHERE t1.citizen_name <> t2.citizen_name AND t1.city = t2.city
+				ORDER BY t1.city = t2.city;
+				
+				
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+    

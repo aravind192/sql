@@ -1,0 +1,15 @@
+Normal SQL Syntax:
+                SELECT column1, column2, ....
+                FROM Table_Name1, Table_Name2, ...
+                WHERE Conditions
+                ORDER BY Column1, Column2, ...
+                LIMIT NumberOfRecords;
+
+
+1.   DISTINCT : To select distinct records(rows, data) from the table.
+                some times records contain dublicate data so to select distinct records use distinct keyword.
+                EXAMPLE:
+                        SELECT COUNT(DISTINCT country) FROM countries
+                        
+2.  
+                
